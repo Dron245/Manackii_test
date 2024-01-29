@@ -171,7 +171,7 @@
 	}
 
 	&__cost {
-		display: flex;
+		display: inline-flex;
 		position: relative;
 		padding-bottom: toRem(15);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.10);
@@ -246,9 +246,13 @@
 	}
 
 	&__number {
+		min-width: toRem(70);
 		font-size: toRem(38);
 		font-weight: 800;
 		color: $hv;
+		&_two {
+			min-width: toRem(50);
+		}
 		// min-width: 82px;
 	}
 
