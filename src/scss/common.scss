@@ -1,0 +1,53 @@
+// Заголовки, общие БЄМ блоки и прочее...
+.button {
+	display: flex;
+	justify-content: center;
+	place-items: center;
+	background-color: $maingreen;
+	border: 1px solid #D0D0D0;
+	box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.10);
+	padding: toRem(12) toRem(24);
+	border-radius: 7px;
+	// border: 0.864px solid #D66567;
+	color: $hv;
+	font-weight: 500;
+	line-height: 1.28;
+	column-gap: toRem(10);
+	transition: background-color 0.3s, color 0.3s;
+	text-align: center;
+	&--red {
+		
+		border: 1px solid #D66567;
+		background-color: #BC4749;
+	}
+	&:hover{
+		
+	}
+	@media (any-hover: hover){
+		&:hover{
+			background-color: $hv;
+			color: $mainred;
+			& .button__img {
+			background-color: $mainred;
+			& svg path {
+				stroke: white;
+			}
+		}
+		}
+	}
+	&__img {
+		flex: 0 0 16px;
+		width: 16px;
+		height: 16px;
+		border-radius: 100px;
+		background-color: rgba(255, 255, 255, 0.60);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s;
+		& svg path {
+			transform: translate(0px, 0.5px);
+			transition: stroke 0.3s;
+		}
+	}
+}
