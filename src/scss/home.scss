@@ -74,30 +74,35 @@
 	}
 
 	&__parts {
-		display: grid;
-		// display: flex;
+		// display: grid;
+		display: flex;
 		flex-wrap: wrap;
-		grid-template-columns: repeat(6,167px);
+		// grid-template-columns: repeat(6,167px);
 		// grid-template-columns: repeat(auto-fit, 334px);
-		align-items: center;
+		// align-items: flex-start;
+		// align-items: center;
 		justify-content: center;
 		@media (max-width: em(1000)){
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			// grid-template-columns: 1fr 1fr 1fr 1fr;
 			gap: toRem(20);
 		}
 		@media (max-width:$mobile){
-			 grid-template-columns: 1fr 1fr; 
+			//  grid-template-columns: 1fr 1fr; 
 		}
 	}
 
 	&__part {
-		grid-column: span 2;
-		display: grid;
-		grid-template-rows: subgrid;
+		// height: 100%;
+		// grid-column: span 2;
+		// display: grid;
+		// grid-template-rows: subgrid;
+		display: flex;
+		flex-direction: column;
+		// flex-grow: 1;
 		// position: relative;
 		// grid-row: 1 / auto;
-		grid-row: auto / span 3;
-		flex: 0 0 27.973199%; /* 334/1194 */
+		// grid-row: auto / span 3;
+		// flex: 0 0 27.973199%; /* 334/1194 */
 		flex: 0 0 334px;
 		overflow: hidden;
 		padding: toRem(40) toRem(60) toRem(28) toRem(60);
@@ -105,7 +110,8 @@
 		background: #6A994E;
 		box-shadow: 0px 3.785px 94.621px 0px rgba(0, 0, 0, 0.25);
 		transition: opacity 0.3s;
-		@media (max-width:$mobile){
+		@media (max-width:$mobileSmall){
+			flex: 0 0 300px;
 			 padding-left: 30px;
 			 padding-right: 30px; 
 		}
@@ -150,12 +156,6 @@
 	}
 }
 .part {
-	// display: grid;
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: space-between;
-	// height: 600px;
-	// height: 100%;
 	&__block-title {
 		color: $hv;
 		font-size: toRem(16);
@@ -214,7 +214,7 @@
 	}
 
 	&__list {
-		
+		&:not(:last-child) {margin-bottom: toRem(18);}
 	}
 
 	&__item {
@@ -232,8 +232,8 @@
 	}
 
 	&__button {
-		// margin-top: auto;
-		margin-top: 1.125rem;
+		margin-top: auto;
+		// margin-top: 1.125rem;
 	}
 }
 .cost-part {
@@ -262,6 +262,7 @@
 	}
 }
 .button {
+	// margin-top: auto;
 	// margin-top: toRem(153);
 	width: 100%;
 }
